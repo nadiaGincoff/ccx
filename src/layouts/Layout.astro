@@ -1,5 +1,5 @@
 ---
-import Nav from '../components/Nav'
+import Nav from "../components/Nav"
 interface Props {
 	title: string;
 }
@@ -20,7 +20,7 @@ console.log(title);
 	</head>
 	<body>
 		<main>
-			<Nav />
+			<Nav client:visible/>
 			<slot id="content"/>
 		</main>
 	</body>
@@ -32,7 +32,7 @@ console.log(title);
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		background-color: white;
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

@@ -40,6 +40,7 @@ const NavLinks = ({
 	<div className={className}>
 		{navLinks.map(({ name, href, id }) => (
 			<motion.a
+				style={{ fontFamily: 'aAtmospheric' }}
 				key={id}
 				variants={isMobile ? itemMotion : itemMotionDesktop}
 				href={href}
@@ -49,6 +50,7 @@ const NavLinks = ({
 		))}
 	</div>
 )
+
 export default function Nav () {
 	const [toggled, setToggled] = useState(false)
 	const matches = useMediaQuery('(min-width: 768px)')
@@ -75,8 +77,8 @@ export default function Nav () {
 			</div>
 
 			{!matches && (
-				<h1 className='text-2xl font-bold'>
-					<a href='/'>CCX.</a>
+				<h1 className='text-4xl font-bold' style={{ fontFamily: 'aAtmospheric' }}>
+					<a href='/' style={{ fontFamily: 'aAtmospheric' }}>CCX.</a>
 				</h1>
 			)}
 

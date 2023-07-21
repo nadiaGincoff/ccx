@@ -6,7 +6,7 @@ import portrait from '/main-portrait.jpg'
 <div class="text-black relative mx-12 flex flex-col items-center justify-center gap-12 xl:flex-row xl:gap-36">
   <div class="w-full xl:w-1/2">
     <h1 class=text-3xl>
-      <span class="font-bold text-4xl upper">
+      <span class="font-bold text-2xl md:text-4xl upper atmospheric ">
         Inspired by sound vibration. 
       </span>
     </h1>
@@ -39,8 +39,8 @@ import portrait from '/main-portrait.jpg'
     <div
       class="flex justify-center pt-20 pb-12 text-center text-main text-content xl:gap-16"
     >
-      <h1 class="text-center text-4xl">
-        Joaquin Wilson-Rae
+      <h1 class="text-center text2xl block mx-10 font-[aAtmospheric]">
+        Don't repeat yourself.
       </h1>
     </div>
   </div>
@@ -63,6 +63,10 @@ import portrait from '/main-portrait.jpg'
     to {
       stroke-dashoffset: 0;
     }
+  }
+  @font-face { font-family: aAtmospheric; src: url('/public/fonts/aAtmospheric.ttf'); } 
+  .atmospheric {
+    font-family: aAtmospheric;
   }
 </style>
 

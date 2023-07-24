@@ -1,10 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Intro from '../components/Intro.astro';
-import MusicGallery from '../components/MusicGallery.astro';
+import ReleaseGallery from '../components/ReleaseGallery.astro';
 ---
 
 <Layout title="Artist">
-	<Intro />
-	<MusicGallery />
+	<main class="m-auto w-full flex justify-center items-center flex-col">
+		<Intro />
+		<ReleaseGallery />
+	</main>
 </Layout>

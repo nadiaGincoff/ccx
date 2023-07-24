@@ -1,0 +1,5 @@
+{
+	"runtime": "nodejs16.x",
+	"handler": "projects/practice-projects/astro/ccx/dist/entry.mjs",
+	"launcherType": "Nodejs"
+}

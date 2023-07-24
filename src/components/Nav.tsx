@@ -65,16 +65,25 @@ export default function Nav () {
 				fill='none'
 				xmlns='https://www.w3.org/2000/svg'
 			>
-				<path
+				<motion.path
 					d='M2 2L428 2'
 					stroke='black'
 					strokeWidth={2}
 					strokeLinecap='round'
+					animate={{ pathLength: 1, opacity: 1 }}
+					initial={{ pathLength: 0, opacity: 0 }}
+					transition={{ delay: 1, duration: 0.75 }}
 				/>
 			</svg>
-			<div>
+			<motion.a
+				href='/'
+				animate={{ opacity: 1, x: 0 }}
+				initial={{ opacity: 0, x: -25 }}
+				transition={{ delay: 0.05 }}
+				className='flex gap-12'
+			>
 				<img src={avatar} width='60rem'style={{ borderRadius: '50%' }} alt='Logo' />
-			</div>
+			</motion.a>
 
 			{!matches && (
 				<h1 className='text-4xl font-bold' style={{ fontFamily: 'aAtmospheric' }}>
@@ -114,7 +123,7 @@ export default function Nav () {
 			<motion.div
 				animate={{ opacity: 1, x: 0 }}
 				initial={{ opacity: 0, x: 25 }}
-				transition={{ delay: 0.35 }}
+				// transition={{ delay: 0.35 }}
 				onClick={() => setToggled((prevToggle) => !prevToggle)}
 				className={'burger z-50 cursor-pointer space-y-1.5 md:hidden'}
 			>

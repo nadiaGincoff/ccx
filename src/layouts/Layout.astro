@@ -21,6 +21,7 @@ const { title } = Astro.props;
 	<body>
 		<Nav client:visible/>
 		<slot id="content" />
+		<slot id="releases"/>
 	</body>
 </html>
 <style is:global>
@@ -36,6 +37,28 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	#backgroundVideo {
+		object-fit: cover;
+		width: 100vw;
+		height: 100vh;
+	  position: fixed;
+	  right: 0;
+	  bottom: 0;
+	  min-width: 100%;
+	  min-height: 100%;
+		z-index: -1;
+	}
+
+	/* Add some content at the bottom of the video/page */
+	.bg-video-content {
+	  position: fixed;
+	  bottom: 0;
+	  background: rgba(0, 0, 0, 0.5);
+	  color: #f1f1f1;
+	  width: 100%;
+	  padding: 20px;
 	}
 
 </style>

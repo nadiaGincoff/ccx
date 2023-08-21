@@ -13,39 +13,39 @@ interface Release {
 }
 
 export const releases: Release[] = [
-  {
+	{
 		id: 'unveiled',
-    soundcloudId: 1342565455,
-		img: unveiled,
+		soundcloudId: 1342565455,
+		img: unveiled
 	},
 	{
 		id: 'unchained',
-    soundcloudId: 1196616841,
-		img: unchained,
+		soundcloudId: 1196616841,
+		img: unchained
 	},
 	{
 		id: 'yatuza',
 		img: yatuza,
-    soundcloudId: 1567961161,
+		soundcloudId: 1567961161
 	},
-  {
+	{
 		id: 'orchid',
 		img: orchid,
-    soundcloudId: 1554278137,
+		soundcloudId: 1554278137
 	},
-  {
+	{
 		id: 'dreamer',
 		img: dreamer,
-    soundcloudId: 898183684,
+		soundcloudId: 898183684
 	},
-  {
+	{
 		id: 'alliwantisyou',
 		img: alliwantisyou,
-		soundcloudId: 863850649,
+		soundcloudId: 863850649
 	},
-  {
+	{
 		id: 'funkandbass',
 		img: funkandbass,
-		soundcloudId: 525481956,
-	},
+		soundcloudId: 525481956
+	}
 ]

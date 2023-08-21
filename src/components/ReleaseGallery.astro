@@ -1,5 +1,7 @@
 ---
 import ReleaseItem from './ReleaseItem.astro'
+import Layout from '../layouts/Layout.astro';
+
 // import dreamer from '/dreamer.jpg'
 // import alliwantisyou from '/alliwantisyou.jpg'
 // import funkandbass from '/funkandbass.jpg'
@@ -17,18 +19,25 @@ import ReleaseItem from './ReleaseItem.astro'
 // ]
 import { releases } from '../data/releases'
 ---
-
-  <h1 class="my-24 text-center text-4xl" style={{ fontFamily: 'aAtmospheric'}}>
-    Latest releases
-  </h1> 
-  <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 md:gap-24 px-5">
-    {
-      releases.map((release) => {
-        return (
-          <li>
-            <ReleaseItem release={release}/>
-          </li>
-        )
-      })
-    }
+<Layout title="releases">
+  <div slot="releases">
+    <video autoplay muted loop id="backgroundVideo" slot="releases">
+      <source src="/public/videos/explotion.mp4" type="video/mp4">
+    </video>
+    <h1 class="text-white my-24 text-center text-4xl" style={{ fontFamily: 'aAtmospheric'}}>
+      Latest releases
+    </h1> 
+    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 md:gap-24 px-5">
+      {
+        releases.map((release) => {
+          return (
+            <li>
+              <ReleaseItem release={release}/>
+            </li>
+          )
+        })
+      }
   </ul>
+</div>
+
+</Layout>

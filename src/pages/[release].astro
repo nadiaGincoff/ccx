@@ -1,39 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { releases } from '../data/releases';
+
 const { release } = Astro.params
 
 const info = releases.find(b => b.id === release)
 if (!info) {
   return Astro.redirect("/404")
 }
+
 ---
 
 <Layout title={info.id}>
   <video autoplay muted loop id="backgroundVideo">
     <source src="/public/videos/explotion.mp4" type="video/mp4">
   </video>
-  <main class="m-auto p-4 h-full flex flex-col justify-center items-center content">
-    <div class="flex flex-col">
-      <picture class="mb-8 w-full relative">
+  <main class="max-h-screen mx-4 flex flex-col justify-center items-center">
+    <div     
+      class='flex max-h-screen items-center justify-center'
+    >
+      <div
+        class="overflow-hidden aspect-[500/500] cursor-pointer rounded-xl relative group"
+      >
+        <div
+          class="w-full rounded-xl z-40 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out cursor-pointer absolute inset-x-0 -bottom-2 pt-30 text-white flex items-end"
+        >
+          <div>
+              <div
+                  class="transform-gpu p-4 space-y-3 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 bg-gradient-to-t from-black to-transparent pb-10 transform transition duration-300 ease-in-out"
+              >
+                <div class="font-bold uppercase">{info.name}</div>
+                <div class="opacity-80 text-sm w-full">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis culpa explicabo harum! Non asperiores enim nam? Sint, similique tenetur labore ratione harum omnis ea temporibus culpa expedita dignissimos id.
+                </div>
+              </div>
+          </div>
+        </div>
         <img
-          class="aspect-[500/500] shadow-md relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3 contrast-110" 
+          class="object-cover w-full aspect-[500/500] group-hover:scale-110 transition duration-500 ease-in-out"
           src={info.img} 
           alt={`${info.id}`}
           style={`view-transition-name: release-${info.id}`}
         />
-      </picture>
+      </div>
     </div>
-    <div class="md:px-10">
+    <div class="pt-4 sm:w-[350px] md:w-[500px]">
       <iframe 
         id="soundcloud"
-        width="500px" 
         height="166" 
+        width="100%"
+        max-width="100%"
         allow="autoplay"
-        src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${info.soundcloudId}&amp;color=84D290&show_artwork=false&single_active=true`} 
+        class="soundcloud"
+        src={`https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/${info.soundcloudId}&amp;color=f9ac45ff&show_artwork=false&single_active=true&show_playcount=false`} 
       >
       </iframe>
     </div>
   </main>
 </Layout>
-

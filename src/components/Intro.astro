@@ -3,18 +3,18 @@ import paint from '/paint.png';
 import portrait from '/main-portrait.jpg'
 ---
 
-<div class="text-black relative mx-12 flex flex-col items-center justify-center gap-12 xl:flex-row xl:gap-36 h-full" slot="content">
+<div class="text-white relative mx-12 pt-16 flex flex-col items-center justify-center gap-12 xl:flex-row xl:gap-36 h-full" slot="content">
   <div class="w-full xl:w-1/2">
     <h1 class=text-3xl>
-      <span class="font-bold text-2xl md:text-4xl upper atmospheric ">
-        Inspired by sound vibration. 
+      <span class="font-bold text-xl md:text-4xl upper atmospheric ">
+        Inspired by sound vibration<span class="font-bold text-primary">.</span>
       </span>
     </h1>
     <div class="relative mt-12">
       <svg class="absolute h-full w-full overflow-visible">
         <defs>
           <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" style={{ stopColor: "#84D290", stopOpacity: 1 }}
+            <stop offset="0%" style={{ stopColor: "#f9ac45ff", stopOpacity: 1 }}
             ></stop>
             <stop offset="100%" style={{ stopColor: "#3b7366", stopOpacity: 1 }}
             ></stop>
@@ -24,11 +24,11 @@ import portrait from '/main-portrait.jpg'
           id="border-path"
           fill="none"
           stroke="url(#gradient)"
-          stroke-width="4">
+          stroke-width="2">
         </path>
       </svg>
-      <p id="anim-p" class="p-6 text-main">
-        Hey there, I'm <span class="font-bold text-[#84D290]">Joaquin Wilson</span> a drum and bass music artist proudly representing Buenos Aires, Argentina. <br/> 
+      <p id="anim-p" class="text-l md:text-xl sm:p-5 md:p-10 text-main text-white/70">
+        Hey there, I'm <span class="font-bold text-primary">CCX</span> a drum and bass music artist proudly representing Buenos Aires, Argentina. <br/> 
         <br/> 
         Rhythm runs through my veins, and I've cultivated a deep love for crafting captivating beats that set dancefloors ablaze.<br/> 
         <br/> 
@@ -40,7 +40,7 @@ import portrait from '/main-portrait.jpg'
       class="flex justify-center pt-20 pb-12 text-center text-main text-content xl:gap-16"
     >
       <h1 class="text-center text-2xl md:text-3xl  block mx-10 font-[aAtmospheric]">
-        Don't repeat yourself.
+
       </h1>
     </div>
   </div>
@@ -52,7 +52,7 @@ import portrait from '/main-portrait.jpg'
   </div>
 </div>
 
-<div class="mt-12 h-4 w-full bg-[]"></div>
+<div class="mt-12 h-4 w-full bg-red"></div>
 
 <style>
   #border-path {

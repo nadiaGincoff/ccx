@@ -1,43 +1,26 @@
 ---
 import ReleaseItem from './ReleaseItem.astro'
-import Layout from '../layouts/Layout.astro';
-
-// import dreamer from '/dreamer.jpg'
-// import alliwantisyou from '/alliwantisyou.jpg'
-// import funkandbass from '/funkandbass.jpg'
-// import orchid from '/orchid.jpg'
-// import unchained from '/unchained.jpg'
-// import yatuza from '/yatuza.jpg'
-
-// const releases = [
-//     { src: unchained, alt: 'unchained' },
-//     { src: yatuza, alt: 'yatuza' },
-//     { src: orchid, alt: 'orchid' },
-//     { src: dreamer, alt: 'dreamer' },
-//     { src: alliwantisyou, alt: 'alliwantisyou' },
-//     { src: funkandbass, alt: 'funkandbass' },
-// ]
 import { releases } from '../data/releases'
 ---
-<Layout title="releases">
-  <div slot="releases">
-    <video autoplay muted loop id="backgroundVideo" slot="releases">
-      <source src="/public/videos/explotion.mp4" type="video/mp4">
-    </video>
-    <h1 class="text-white my-24 text-center text-4xl" style={{ fontFamily: 'aAtmospheric'}}>
-      Latest releases
-    </h1> 
-    <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20 md:gap-24 px-5">
-      {
-        releases.map((release) => {
-          return (
-            <li>
-              <ReleaseItem release={release}/>
-            </li>
-          )
-        })
-      }
-  </ul>
-</div>
+<h1 class="text-white my-24 text-center text-4xl text-sp" style={{ fontFamily: 'aAtmospheric'}}>
+  DISCOGRAPHY<span class="font-bold text-primary">.</span>
+</h1> 
+<ul class="flex flex-row flex-wrap justify-center items-center gap-10 pb-16">
+  {
+    releases.map((release) => {
+      return (
+        <li>
+          <ReleaseItem release={release}/>
+        </li>
+      )
+    })
+  }
+</ul>
 
-</Layout>
+<style>
+  @font-face { font-family: aAtmospheric; src: url('/public/fonts/aAtmospheric.ttf'); } 
+  .atmospheric {
+    font-family: aAtmospheric;
+  }
+
+</style>

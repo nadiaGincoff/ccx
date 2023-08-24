@@ -2,18 +2,18 @@
 const { release } = Astro.props
 ---
 
-<div class="group relative cursor-pointer hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl">
+<div class="sm:w-[350px] group relative cursor-pointer hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl">
   <a
     href={`/${release.id}`}
   >
     <img 
-      class="aspect-[500/500] shadow-md relative z-10 w-full rounded-lg transition-all group-hover:-translate-x-3 contrast-110"
+      class="sm:w-[350px] sm:h-[350px] md:aspect-[500/500] shadow-md relative z-10 w-full rounded-lg transition-all group-hover:-translate-xy-1 contrast-110"
       src={release.img} 
       alt={`${release.id}`}
       style={`view-transition-name: release-${release.id}`}
     >
     <div
-      class="aspect-[500/500] absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-2 group-hover:translate-y-4"
+      class="sm:w-[350px] sm:h-[350px] md:aspect-[500/500] absolute left-0 top-0 h-full w-full rounded-lg bg-black transition-all group-hover:translate-x-2 group-hover:translate-y-4"
     >
     </div>
   </a> 

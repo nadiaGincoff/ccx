@@ -3,7 +3,6 @@ import Nav from "../components/Nav"
 interface Props {
 	title: string;
 }
-
 const { title } = Astro.props;
 ---
 
@@ -21,8 +20,8 @@ const { title } = Astro.props;
 	<body>
 		<Nav client:visible/>
 		<slot id="content" />
-		<slot id="releases"/>
 	</body>
+	<footer class="text-center text-white/70">make with love by Nadia</footer>
 </html>
 <style is:global>
 	:root {
@@ -31,7 +30,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: white;
+		background-color: #10111e;
 		
 	}
 	code {
@@ -60,7 +59,11 @@ const { title } = Astro.props;
 	  width: 100%;
 	  padding: 20px;
 	}
-
+	.responsive-iframe {
+  	aspect-ratio: 16/9; /* For a 16:9 aspect ratio, adjust as needed */
+  	width: 100%;
+  	max-width: 100%;
+	}
 </style>
 <script>
 		if (document.startViewTransition) {

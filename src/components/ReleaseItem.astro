@@ -2,7 +2,7 @@
 const { release } = Astro.props
 ---
 
-<div class="sm:w-[350px] group relative cursor-pointer hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl">
+<div class="card sm:w-[350px] group relative cursor-pointer hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl">
   <a
     href={`/${release.id}`}
   >
@@ -19,3 +19,20 @@ const { release } = Astro.props
   </a> 
 </div>
 
+<style>
+  /* // scroll driven animation */
+  @keyframes slide-fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(5vh);
+    }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .card {
+      view-timeline-name: --item-timeline;
+      animation: slide-fade-in both;
+      animation-timeline: --item-timeline;
+      animation-range: contain 0% contain 50%;
+    }
+  }
+</style>

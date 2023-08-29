@@ -17,7 +17,7 @@ const { title } = Astro.props;
 		<meta title={title} />
 		<meta name="view-transition" content="same-origin" />
 	</head>
-	<body>
+	<body class="h-screen">
 		<Nav client:visible/>
 		<slot id="content" />
 	</body>

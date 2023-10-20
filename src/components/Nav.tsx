@@ -1,4 +1,4 @@
-import avatar from '../../public/avatar.jpg'
+import logo from '../../public/favicon.svg'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { useMediaQuery } from '../utils/hooks/useMediaQuery'
@@ -47,7 +47,7 @@ export default function Nav () {
 				href='/'
 				className='flex gap-12'
 			>
-				<img src={avatar} width='60rem'style={{ borderRadius: '50%' }} alt='Logo' />
+				<img src={logo} width='60rem' alt='Logo' />
 			</a>
 
 			{toggled && (
